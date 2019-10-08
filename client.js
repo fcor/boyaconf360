@@ -12,12 +12,12 @@ function init(bundle, parent, options = {}) {
 
   // Render your app content to the default cylinder surface
   r360.renderToSurface(
-    r360.createRoot('slides_react360', { /* initial props */ }),
+    r360.createRoot('home', { /* initial props */ }),
     r360.getDefaultSurface()
   );
 
   // Load the initial environment
-  r360.compositor.setBackground(r360.getAssetURL('360_world.jpg'));
+  // r360.compositor.setBackground(r360.getAssetURL('space3.jpg'));
 }
 
 window.React360 = {init};
