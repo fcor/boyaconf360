@@ -1,4 +1,4 @@
-import {ReactInstance} from 'react-360-web';
+import { ReactInstance, Surface } from 'react-360-web';
 
 function init(bundle, parent, options = {}) {
   const r360 = new ReactInstance(bundle, parent, {
@@ -6,9 +6,12 @@ function init(bundle, parent, options = {}) {
     ...options,
   });
 
+
+  const mainSurface = new Surface(1200, 620, Surface.SurfaceShape.Cylinder);
+
   r360.renderToSurface(
-    r360.createRoot('home'),
-    r360.getDefaultSurface()
+    r360.createRoot('app'),
+    mainSurface,
   );
 
   // Load the initial environment

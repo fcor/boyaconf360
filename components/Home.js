@@ -5,7 +5,6 @@ import {
   StyleSheet,
   Text,
   View,
-  Environment,
   VrButton,
 } from 'react-360';
 
@@ -19,11 +18,6 @@ class Home extends React.Component {
     this.handleEnter = this.handleEnter.bind(this);
     this.handleExit = this.handleExit.bind(this);
     this.handleStart = this.handleStart.bind(this);
-
-    Environment.setBackgroundImage(
-      asset('space3.jpg'),
-      {rotateTransform: [{rotateX: '180deg'}]},
-    );
   }
 
   handleEnter(){
@@ -39,53 +33,44 @@ class Home extends React.Component {
   }
 
   handleStart(){
-    console.log('Start!');
+    this.props.handleNext('MAIN');
   }
 
   render() {
     const hover = this.state.hover;
 
     return (
-      <View style={styles.panel}>
-        <View style={styles.container}>
-          <Image style={styles.image} 
-                source={asset('boyaconf.png')} 
-          />
-          <View style={styles.textContainer}>
-            <Text style={[styles.tagOpen, styles.text]}>
-              {`<`}
-            </Text>
-            <Text style={styles.text}>
-              BoyaConf 360
-            </Text>
-            <Text style={[styles.tagClose, styles.text]}>
-              {`>`}
-            </Text>
-          </View>
-          <VrButton
-              style={[styles.button, hover ? styles.buttonHover : null]}
-              onEnter={this.handleEnter}
-              onExit={this.handleExit}
-              onClick={this.handleStart}
-          >
-            <Text style={styles.textDate}>
-              Empecemos!
-            </Text>
-          </VrButton>
+      <View style={styles.container}>
+        <Image style={styles.image} 
+              source={asset('boyaconf.png')} 
+        />
+        <View style={styles.textContainer}>
+          <Text style={[styles.tagOpen, styles.text]}>
+            {`<`}
+          </Text>
+          <Text style={styles.text}>
+            BoyaConf 360
+          </Text>
+          <Text style={[styles.tagClose, styles.text]}>
+            {`>`}
+          </Text>
         </View>
+        <VrButton
+            style={[styles.button, hover ? styles.buttonHover : null]}
+            onEnter={this.handleEnter}
+            onExit={this.handleExit}
+            onClick={this.handleStart}
+        >
+          <Text style={styles.textDate}>
+            Empecemos!
+          </Text>
+        </VrButton>
       </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
-  panel: {
-    width: 1000,
-    height: 600,
-    // backgroundColor: 'rgba(255, 255, 255, 0.4)',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
   container: {
     justifyContent: 'center',
     alignItems: 'center',
