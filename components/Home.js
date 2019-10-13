@@ -6,17 +6,45 @@ import {
   Text,
   View,
   Environment,
+  VrButton,
 } from 'react-360';
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      hover: false,
+    }
+
+    this.handleEnter = this.handleEnter.bind(this);
+    this.handleExit = this.handleExit.bind(this);
+    this.handleStart = this.handleStart.bind(this);
+
     Environment.setBackgroundImage(
       asset('space3.jpg'),
       {rotateTransform: [{rotateX: '180deg'}]},
     );
   }
+
+  handleEnter(){
+    this.setState({
+      hover: true,
+    })
+  }
+
+  handleExit(){
+    this.setState({
+      hover: false,
+    });
+  }
+
+  handleStart(){
+    console.log('Start!');
+  }
+
   render() {
+    const hover = this.state.hover;
+
     return (
       <View style={styles.panel}>
         <View style={styles.container}>
@@ -28,18 +56,22 @@ class Home extends React.Component {
               {`<`}
             </Text>
             <Text style={styles.text}>
-              BoyaConf
+              BoyaConf 360
             </Text>
             <Text style={[styles.tagClose, styles.text]}>
               {`>`}
             </Text>
           </View>
-          <Text style={styles.textDate}>
-            Noviembre 9, 2019
-          </Text>
-          <Text style={styles.textLocation}>
-            Duitama, Boyacá, Colombia
-          </Text>
+          <VrButton
+              style={[styles.button, hover ? styles.buttonHover : null]}
+              onEnter={this.handleEnter}
+              onExit={this.handleExit}
+              onClick={this.handleStart}
+          >
+            <Text style={styles.textDate}>
+              Empecemos!
+            </Text>
+          </VrButton>
         </View>
       </View>
     )
@@ -64,7 +96,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   textContainer: {
-    width: 500,
+    width: 600,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
@@ -79,13 +111,22 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   textDate: {
-    fontSize: 70,
+    fontSize: 40,
     fontWeight: 'bold',
   },
-  textLocation: {
-    fontSize: 50,
-    fontWeight: 'bold',
+  button: {
+    width: 250,
+    height: 80,
+    borderRadius: 8,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#eb3b5a',
   },
+  buttonHover: {
+    transform: [
+      {scale: [1.1, 1.1, 1.1]}
+    ]
+  }
 });
 
 export default Home;
