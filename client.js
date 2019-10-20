@@ -7,7 +7,7 @@ function init(bundle, parent, options = {}) {
   });
 
 
-  const mainSurface = new Surface(1200, 620, Surface.SurfaceShape.Cylinder);
+  const mainSurface = new Surface(1140, 620, Surface.SurfaceShape.Cylinder);
 
   r360.renderToSurface(
     r360.createRoot('app'),

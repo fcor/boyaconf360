@@ -17,9 +17,14 @@ class HowItWorks extends React.Component {
   render() {
     return (
       <View style={styles.panelContainer}>
-        <Title>
+        <View style={styles.titleContainer}>
+          <Title>
           ¿Cómo Funciona?
-        </Title>
+          </Title>
+        </View>
+        <View style={styles.contentContainer}>
+
+        </View>
       </View>
     )
   }
@@ -32,10 +37,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  title: {
-    fontSize: 50,
-    fontWeight: 'bold',
+  titleContainer: {
+    width: '100%',
+    height: 40,
   },
+  contentContainer: {
+    width: '100%',
+    height: 300,
+    backgroundColor: 'rgba(255, 255, 255, 0.4)',
+  }
 });
 
 export default HowItWorks;

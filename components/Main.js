@@ -43,28 +43,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-  image: {
-    width: 150,
-    height: 150,
-    marginBottom: 20,
-  },
-  text: {
-    fontSize: 90,
-    fontWeight: 'bold',
-  },
-  button: {
-    width: 250,
-    height: 80,
-    borderRadius: 8,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#eb3b5a',
-  },
-  buttonHover: {
-    transform: [
-      {scale: [1.1, 1.1, 1.1]}
-    ]
-  }
 });
 
 export default Main;

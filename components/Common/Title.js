@@ -30,8 +30,11 @@ class Title extends React.Component {
 const styles = StyleSheet.create({
   textContainer: {
     width: '100%',
+    height: 40,
     flexDirection: 'row',
+    alignItems: 'center',
     justifyContent: 'space-between',
+    backgroundColor: 'rgba(255, 100, 255, 0.4)',
   },
   tagOpen: {
     color: '#4dcc89',

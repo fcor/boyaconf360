@@ -24,9 +24,8 @@ class Main extends React.Component {
 
 const styles = StyleSheet.create({
   mainPanel: {
-    width: 330,
-    height: 330,
-    backgroundColor: 'rgba(255, 255, 255, 0.4)',
+    width: 340,
+    height: 340,
   },
 });
 
