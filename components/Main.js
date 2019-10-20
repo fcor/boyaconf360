@@ -7,6 +7,10 @@ import {
   View,
   VrButton,
 } from 'react-360';
+import Panel from './Panel.js';
+import GetStarted from './panels/GetStarted';
+import HowItWorks from './panels/HowItWorks';
+import Learn from './panels/Learn';
 
 class Main extends React.Component {
   constructor(props) {
@@ -16,19 +20,17 @@ class Main extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        
-        <View style={styles.mainPanel}>
-          <Text>Panel 1</Text>
-        </View>
+        <Panel>
+          <GetStarted />
+        </Panel>
 
-        <View style={styles.mainPanel}>
-          <Text>Panel 2</Text>
-        </View>
+        <Panel>
+          <HowItWorks />
+        </Panel>
 
-        <View style={styles.mainPanel}>
-          <Text>Panel 3</Text>
-        </View>
-
+        <Panel>
+          <Learn />
+        </Panel>
       </View>
     )
   }
@@ -40,11 +42,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-  },
-  mainPanel: {
-    width: 330,
-    height: 330,
-    backgroundColor: 'rgba(255, 255, 255, 0.4)',
   },
   image: {
     width: 150,
