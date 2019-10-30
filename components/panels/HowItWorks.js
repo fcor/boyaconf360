@@ -8,6 +8,7 @@ import {
   VrButton,
 } from 'react-360';
 import Title from '../Common/Title';
+import PanelButton from '../Common/PanelButton';
 
 class HowItWorks extends React.Component {
   constructor(props) {
@@ -23,7 +24,16 @@ class HowItWorks extends React.Component {
           </Title>
         </View>
         <View style={styles.contentContainer}>
-
+          <PanelButton
+            text="React & Runtime"
+            height={145}
+            imgUrl="history.png"
+          />
+          <PanelButton
+            text="Executors"
+            height={145}
+            imgUrl="history.png"
+          />
         </View>
       </View>
     )
@@ -45,6 +55,9 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 300,
     backgroundColor: 'rgba(255, 255, 255, 0.4)',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   }
 });
 
