@@ -1,14 +1,13 @@
 import React from 'react';
 import {
-  asset,
-  Image,
   StyleSheet,
-  Text,
   View,
+  Text,
   VrButton,
 } from 'react-360';
 
-class PanelButton extends React.Component {
+
+class SectionView extends React.Component {
   constructor(props){
     super(props)
     this.state = {
@@ -32,48 +31,49 @@ class PanelButton extends React.Component {
   }
 
   handleClick(){
-    this.props.onClick(this.props.text);
+    this.props.goBack();
   }
 
   render() {
-    const { text, height, imgUrl } = this.props;
-    const hover = this.state.hover;
-
-    const heightStyle = {
-      height,
-    }
+    const { hover } = this.state;
     return (
-      <VrButton
-        style={[styles.buttonContainer, heightStyle, hover ? styles.hover : null]}
-        onEnter={this.handleEnter}
-        onExit={this.handleExit}
-        onClick={this.handleClick}
-        >
+      <View style={styles.container}>
         <Text style={styles.text}>
-          {text}
+          {this.props.section}
         </Text>
-        <Image style={styles.image} source={asset(imgUrl)} />
-      </VrButton>
+        <VrButton
+          style={[styles.button, hover ? styles.buttonHover : null]}
+          onEnter={this.handleEnter}
+          onExit={this.handleExit}
+          onClick={this.handleClick}
+          >
+          <Text style={styles.text}>
+            Go Back
+          </Text>
+        </VrButton>
+      </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
-  buttonContainer: {
+  container: {
     width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: 10,
-    backgroundColor: 'rgba(0, 255, 0, 0.4)',
   },
-  image: {
-    width: 50,
-    height: 50,
+  button: {
+    width: 250,
+    height: 80,
+    borderRadius: 8,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#eb3b5a',
   },
-  hover: {
+  buttonHover: {
     transform: [
-      {scale: [1.02, 1.02, 1.02]}
+      {scale: [1.1, 1.1, 1.1]}
     ]
   },
   text: {
@@ -82,4 +82,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default PanelButton;
+export default SectionView;

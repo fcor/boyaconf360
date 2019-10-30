@@ -1,48 +1,42 @@
 import React from 'react';
-import {
-  asset,
-  Image,
-  StyleSheet,
-  Text,
-  View,
-  VrButton,
-} from 'react-360';
-import Panel from './Panel.js';
-import GetStarted from './panels/GetStarted';
-import HowItWorks from './panels/HowItWorks';
-import Learn from './panels/Learn';
+import PanelsView from "./PanelsView";
+import SectionView from "./SectionView";
+
 
 class Main extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      section: null,
+    };
+    this.handleSelectSection = this.handleSelectSection.bind(this);
+    this.handleGoBack = this.handleGoBack.bind(this);
+  }
+
+  handleSelectSection(section) {
+    this.setState({
+      section,
+    });
+  }
+
+  handleGoBack(){
+    this.setState({
+      section: null,
+    });
   }
 
   render() {
-    return (
-      <View style={styles.container}>
-        <Panel>
-          <GetStarted />
-        </Panel>
+    const { section } = this.state;
 
-        <Panel>
-          <HowItWorks />
-        </Panel>
+    if (!section) {
+      return (
+        <PanelsView selectSection={this.handleSelectSection} />
+      );
+    }
 
-        <Panel>
-          <Learn />
-        </Panel>
-      </View>
-    )
-  }
-}
+    return <SectionView section={section} goBack={this.handleGoBack} />
+  };
+};
 
-const styles = StyleSheet.create({
-  container: {
-    width: '100%',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-});
 
 export default Main;
