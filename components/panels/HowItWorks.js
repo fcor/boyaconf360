@@ -25,15 +25,15 @@ class HowItWorks extends React.Component {
         </View>
         <View style={styles.contentContainer}>
           <PanelButton
-            text="React & Runtime"
+            text="Runtime"
             height={145}
-            imgUrl="history.png"
+            imgUrl="r&r.png"
             onClick={this.props.selectSection}
           />
           <PanelButton
             text="Executors"
             height={145}
-            imgUrl="history.png"
+            imgUrl="executors.png"
             onClick={this.props.selectSection}
           />
         </View>

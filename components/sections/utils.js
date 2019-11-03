@@ -13,7 +13,7 @@ const getSection = (section) => {
       return <ReactVR />;
     case "React 360":
       return <React360 />;
-    case "React & Runtime":
+    case "Runtime":
       return <ReactAndRuntime />;
     case "Executors":
       return <Executors />;

@@ -33,13 +33,13 @@ class Learn extends React.Component {
           <PanelButton
             text="Locations"
             height={97}
-            imgUrl="history.png"
+            imgUrl="3d 2.png"
             onClick={this.props.selectSection}
           />
           <PanelButton
             text="Components"
             height={97}
-            imgUrl="history.png"
+            imgUrl="block.png"
             onClick={this.props.selectSection}
           />
         </View>
