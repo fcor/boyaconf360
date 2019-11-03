@@ -5,6 +5,7 @@ import {
   Text,
   VrButton,
 } from 'react-360';
+import getSection from "./sections/utils";
 
 
 class SectionView extends React.Component {
@@ -36,18 +37,30 @@ class SectionView extends React.Component {
 
   render() {
     const { hover } = this.state;
+    const content = getSection(this.props.section);
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>
-          {this.props.section}
-        </Text>
+        <View style={styles.textContainer}>
+          <Text style={[styles.tagOpen, styles.text]}>
+            {`<`}
+          </Text>
+          <Text style={styles.text}>
+            {this.props.section}
+          </Text>
+          <Text style={[styles.tagClose, styles.text]}>
+            {`>`}
+          </Text>
+        </View>
+        <View style={styles.contentContainer}>
+          {content}
+        </View>
         <VrButton
           style={[styles.button, hover ? styles.buttonHover : null]}
           onEnter={this.handleEnter}
           onExit={this.handleExit}
           onClick={this.handleClick}
           >
-          <Text style={styles.text}>
+          <Text style={styles.buttonText}>
             Go Back
           </Text>
         </VrButton>
@@ -59,13 +72,13 @@ class SectionView extends React.Component {
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    flexDirection: 'row',
+    flexDirection: 'column',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
   button: {
     width: 250,
-    height: 80,
+    height: 60,
     borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',
@@ -73,13 +86,33 @@ const styles = StyleSheet.create({
   },
   buttonHover: {
     transform: [
-      {scale: [1.1, 1.1, 1.1]}
+      {scale: [1.02, 1.02, 1.02]}
     ]
   },
+  textContainer: {
+    height: 80,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
   text: {
-    fontSize: 40,
+    fontSize: 60,
     fontWeight: 'bold',
   },
+  tagOpen: {
+    color: '#4dcc89',
+  },
+  tagClose: {
+    color: '#eb3b5a',
+  },
+  contentContainer:{
+    width: '100%',
+    height: 480,
+  },
+  buttonText: {
+    fontSize: 40,
+    fontWeight: 'bold',
+  }
 });
 
 export default SectionView;
