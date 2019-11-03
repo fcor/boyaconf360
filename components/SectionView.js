@@ -7,7 +7,6 @@ import {
 } from 'react-360';
 import getSection from "./sections/utils";
 
-
 class SectionView extends React.Component {
   constructor(props){
     super(props)
@@ -61,7 +60,7 @@ class SectionView extends React.Component {
           onClick={this.handleClick}
           >
           <Text style={styles.buttonText}>
-            Go Back
+            Atrás
           </Text>
         </VrButton>
       </View>

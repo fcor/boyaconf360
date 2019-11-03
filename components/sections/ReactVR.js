@@ -8,7 +8,7 @@ import {
 } from 'react-360';
 
 
-class SectionView extends React.Component {
+class ReactVR extends React.Component {
 
   render() {
     return (
@@ -73,4 +73,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SectionView;
+export default ReactVR;
