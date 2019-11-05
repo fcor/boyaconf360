@@ -27,13 +27,13 @@ class GetStarted extends React.Component {
           <PanelButton
             text="React VR"
             height={145}
-            imgUrl="history.png"
+            imgUrl="reactvr.png"
             onClick={this.props.selectSection}
           />
           <PanelButton
             text="React 360"
             height={145}
-            imgUrl="history.png"
+            imgUrl="react360.png"
             onClick={this.props.selectSection}
           />
         </View>
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
   contentContainer: {
     width: '100%',
     height: 300,
-    // padding: 20,
+    marginTop: 20,
     backgroundColor: 'rgba(255, 255, 255, 0.4)',
     flexDirection: 'column',
     justifyContent: 'space-between',

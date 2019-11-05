@@ -14,7 +14,7 @@ class Locations extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.paneContainer}>
-          <Image style={styles.image} source={asset("3d.png")} />
+          <Image style={styles.image} source={asset("3d 2.png")} />
           <Text style={styles.text}>
             Entity
           </Text>

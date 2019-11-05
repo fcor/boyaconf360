@@ -27,19 +27,19 @@ class Learn extends React.Component {
           <PanelButton
             text="Surfaces"
             height={97}
-            imgUrl="history.png"
+            imgUrl="surface2.png"
             onClick={this.props.selectSection}
           />
           <PanelButton
             text="Locations"
             height={97}
-            imgUrl="3d 2.png"
+            imgUrl="3d 2i.png"
             onClick={this.props.selectSection}
           />
           <PanelButton
             text="Components"
             height={97}
-            imgUrl="block.png"
+            imgUrl="blocki.png"
             onClick={this.props.selectSection}
           />
         </View>
@@ -62,6 +62,7 @@ const styles = StyleSheet.create({
   contentContainer: {
     width: '100%',
     height: 300,
+    marginTop: 20,
     backgroundColor: 'rgba(255, 255, 255, 0.4)',
     flexDirection: 'column',
     justifyContent: 'space-between',

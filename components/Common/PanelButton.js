@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: 10,
-    backgroundColor: 'rgba(0, 255, 0, 0.4)',
+    backgroundColor: 'rgba(77, 204, 137, 0.4)',
   },
   image: {
     width: 50,

@@ -14,13 +14,13 @@ class Surfaces extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.paneContainer}>
-          <Image style={styles.image} source={asset("web worker.png")} />
+          <Image style={styles.image} source={asset("cylinder.png")} />
           <Text style={styles.text}>
             Cylinder
           </Text>
         </View>
         <View style={styles.paneContainer}>
-          <Image style={styles.image} source={asset("iframe.png")} />
+          <Image style={styles.image} source={asset("flat.png")} />
           <Text style={styles.text}>
             Flat
           </Text>

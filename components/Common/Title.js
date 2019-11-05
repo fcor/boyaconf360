@@ -34,7 +34,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: 'rgba(255, 100, 255, 0.4)',
   },
   tagOpen: {
     color: '#4dcc89',

@@ -27,13 +27,13 @@ class HowItWorks extends React.Component {
           <PanelButton
             text="Runtime"
             height={145}
-            imgUrl="r&r.png"
+            imgUrl="r&ri.png"
             onClick={this.props.selectSection}
           />
           <PanelButton
             text="Executors"
             height={145}
-            imgUrl="executors.png"
+            imgUrl="executorsi.png"
             onClick={this.props.selectSection}
           />
         </View>
@@ -56,6 +56,7 @@ const styles = StyleSheet.create({
   contentContainer: {
     width: '100%',
     height: 300,
+    marginTop: 20,
     backgroundColor: 'rgba(255, 255, 255, 0.4)',
     flexDirection: 'column',
     justifyContent: 'space-between',
