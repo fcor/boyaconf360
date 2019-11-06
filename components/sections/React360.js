@@ -20,7 +20,7 @@ class React360 extends React.Component {
           </Text>
         </View>
         <View style={styles.paneContainer}>
-          <Image style={styles.xplat} source={asset("360_3d.png")} />
+          <Image style={styles.d3} source={asset("360_3d.png")} />
           <Text style={styles.text}>
             Contenido Inmersivo
           </Text>
@@ -44,8 +44,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   xplat: {
-    width: 200,
-    height: 126,
+    width: 380.8,
+    height: 95.2,
+    margin: 25,
+  },
+  d3: {
+    width: 254,
+    height: 156,
   },
   text: {
     fontSize: 40,

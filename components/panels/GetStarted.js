@@ -45,13 +45,13 @@ class GetStarted extends React.Component {
 const styles = StyleSheet.create({
   panelContainer: {
     width: '100%',
-    height: '100%',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
   },
   titleContainer: {
     width: '100%',
+    height: 40,
   },
   contentContainer: {
     width: '100%',
