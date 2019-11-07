@@ -7,6 +7,7 @@ import {
 } from 'react-360';
 import Home from './Home';
 import Main from './Main';
+import EasterEgg from './EasterEgg';
 
 class App extends React.Component {
   constructor(props) {
@@ -37,7 +38,9 @@ class App extends React.Component {
     if (flow === 'HOME') {
       content = <Home handleNext={this.handleNext} />;
     } else if (flow === 'MAIN') {
-      content = <Main />;
+      content = <Main handleNext={this.handleNext} />;
+    } else if (flow === 'EASTER_EGG') {
+      content = <EasterEgg handleNext={this.handleNext} />;
     }
 
     return(

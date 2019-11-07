@@ -30,7 +30,7 @@ class Main extends React.Component {
 
     if (!section) {
       return (
-        <PanelsView selectSection={this.handleSelectSection} />
+        <PanelsView selectSection={this.handleSelectSection} easterEgg={this.props.handleNext} />
       );
     }
 

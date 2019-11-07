@@ -17,15 +17,15 @@ class PanelsView extends React.Component {
     return (
       <View style={styles.container}>
         <Panel>
-          <GetStarted selectSection={this.props.selectSection} />
+          <GetStarted selectSection={this.props.selectSection} easterEgg={this.props.easterEgg} />
         </Panel>
 
         <Panel>
-          <HowItWorks selectSection={this.props.selectSection} />
+          <HowItWorks selectSection={this.props.selectSection} easterEgg={this.props.easterEgg} />
         </Panel>
 
         <Panel>
-          <Learn selectSection={this.props.selectSection} />
+          <Learn selectSection={this.props.selectSection} easterEgg={this.props.easterEgg} />
         </Panel>
       </View>
     )

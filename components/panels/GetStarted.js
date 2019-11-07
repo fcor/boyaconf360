@@ -18,11 +18,11 @@ class GetStarted extends React.Component {
   render() {
     return (
       <View style={styles.panelContainer}>
-        <View style={styles.titleContainer}>
+        <VrButton style={styles.titleContainer} onClick={() => this.props.easterEgg("EASTER_EGG")}>
           <Title>
             Conoce React 360
           </Title>
-        </View>
+        </VrButton>
         <View style={styles.contentContainer}>
           <PanelButton
             text="React VR"
