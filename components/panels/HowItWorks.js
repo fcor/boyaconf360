@@ -28,12 +28,14 @@ class HowItWorks extends React.Component {
             text="Runtime"
             height={145}
             imgUrl="r&ri.png"
+            big
             onClick={this.props.selectSection}
           />
           <PanelButton
             text="Executors"
             height={145}
             imgUrl="executorsi.png"
+            big
             onClick={this.props.selectSection}
           />
         </View>

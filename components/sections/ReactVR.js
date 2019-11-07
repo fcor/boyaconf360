@@ -55,8 +55,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   imageBig: {
-    width: 300,
-    height: 300,
+    width: 280,
+    height: 280,
   },
   oculus:{
     width: 200,

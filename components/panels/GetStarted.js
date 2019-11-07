@@ -28,12 +28,14 @@ class GetStarted extends React.Component {
             text="React VR"
             height={145}
             imgUrl="reactvr.png"
+            big
             onClick={this.props.selectSection}
           />
           <PanelButton
             text="React 360"
             height={145}
             imgUrl="react360.png"
+            big
             onClick={this.props.selectSection}
           />
         </View>

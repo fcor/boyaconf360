@@ -36,7 +36,7 @@ class PanelButton extends React.Component {
   }
 
   render() {
-    const { text, height, imgUrl } = this.props;
+    const { text, height, imgUrl, big } = this.props;
     const hover = this.state.hover;
 
     const heightStyle = {
@@ -52,7 +52,7 @@ class PanelButton extends React.Component {
         <Text style={styles.text}>
           {text}
         </Text>
-        <Image style={styles.image} source={asset(imgUrl)} />
+        <Image style={[styles.image, big ? styles.imageBig : null]} source={asset(imgUrl)} />
       </VrButton>
     )
   }
@@ -70,6 +70,10 @@ const styles = StyleSheet.create({
   image: {
     width: 50,
     height: 50,
+  },
+  imageBig: {
+    width: 70,
+    height: 70,
   },
   hover: {
     transform: [
